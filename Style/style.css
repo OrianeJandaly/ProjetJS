@@ -1,0 +1,100 @@
+	/* global */
+	html, body {
+		margin:0;
+		font-family: Arial;
+		background-image:url('../Images/background.jpg');
+	}
+	form {margin: 0;}
+	#boutique {
+		display:flex;
+	}
+	/* Partie Gauche (catalogue) */
+	#left {
+		text-align: center;
+		width:75%;
+	}
+	#catalogues {
+		margin:auto;
+		padding:5px;
+		border-radius:5px;
+		border:1px solid black;
+		width:40%;	
+		background-color:white;
+		line-height:25px;
+	}
+	#catalogueName {
+		font-size:25px;
+		color:white;
+		font-weight: bold;
+		margin:10px;
+	}
+	#catalogue {
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		height:100%;
+		width:80%;
+		margin:auto;
+	}
+	#catalogue .line {
+		display:flex;
+		justify-content: center;
+	}
+
+	/* Partie Droite (panier) */
+	#right {
+		width:25%;
+		background-color:rgba(0,0,0, 0.5);
+		display:flex;
+		flex-direction: column;
+		position: relative;
+		padding-top:20px;
+	}
+	#panier {
+		display:flex;
+		flex-direction: column;
+		height: fit-content;
+		justify-content: center;
+		text-align: center;
+	}
+	#panier .produit {
+		margin:10px auto;
+	}
+	#panier #total {
+		color:white;
+		font-weight:bold;
+		margin: 10px 0;
+	}
+
+
+	/* la classe produit est utilisée dans le catalogue ET dans le panier */
+	.produit {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		padding:5px;
+		border-radius:5px;
+		border:1px solid black;
+		margin:10px;
+		width:40%;	
+		background-color:white;
+		line-height:25px;
+		overflow-wrap: break-word;
+	}
+	.produit .title {
+		font-weight:bold;
+	}
+	.produit .addToPanierForm {
+	}
+	.produit .addbutton:enabled, .produit .removebutton {
+		cursor:pointer;	
+	}
+	.addbutton img, .removebutton {
+		height:20px;
+		margin:auto;	
+		vertical-align: middle;
+	}
+	.produit .addbutton {
+		opacity:0.25;
+		margin-left:5px;	
+	}
